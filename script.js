@@ -44,23 +44,23 @@ const input = document.getElementById("command");
 const commands = {
   help: `Dostępne komendy:
   - whoami
+  - cv
   - projects
   - github
   - contact
-  - clear
-  - cv`,
+  - clear`,
 
-    whoami: "Jestem studentem trzeciego roku innformatyki na Politechnice Poznańskiej. Szukam możliwości rozwoju zawodowego w branży IT.",
-  
-    projects:  `1. WatherTrack - https://github.com/Klaudiusz25/WeatherTrack
-                2. MixIt - https://github.com/Klaudiusz25/MixIt`,
+  whoami: `Jestem studentem trzeciego roku informatyki na Politechnice Poznańskiej.
+  Szukam możliwości rozwoju zawodowego w branży IT.`,
 
-    github: "https://github.com/Klaudiusz25",
+  projects: `1. WeatherTrack - <a href="https://github.com/Klaudiusz25/WeatherTrack" target="_blank">https://github.com/Klaudiusz25/WeatherTrack</a><br>
+  2. MixIt - <a href="https://github.com/Klaudiusz25/MixIt" target="_blank">https://github.com/Klaudiusz25/MixIt</a>`,
 
-    contact: `Skontaktuj się przez email: klaudiuszkazmierowski@gmail.com`,
+  github: `<a href="https://github.com/Klaudiusz25" target="_blank">https://github.com/Klaudiusz25</a>`,
 
-    cv: `Pobierz moje CV: <a href="CV_Klaudiusz_Kazmierowski.pdf" target="_blank">Kliknij tutaj</a>`,
+  contact: `Skontaktuj się przez email: klaudiuszkazmierowski@gmail.com`,
 
+  cv: `Pobierz moje CV: <a href="CV_Klaudiusz_Kazmierowski.pdf" target="_blank">Kliknij tutaj</a>`,
 };
 
 input.addEventListener("keydown", function (e) {

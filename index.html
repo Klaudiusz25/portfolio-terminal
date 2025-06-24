@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Terminal Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<canvas id="matrix"></canvas>
+
+<div id="boot-screen">
+    <pre>
+        [BOOTING] Loading system files...
+        [OK] Kernel loaded.
+        [OK] Initializing terminal interface...
+        [OK] Access granted.
+
+        → Naciśnij dowolny klawisz...
+    </pre>
+</div>
+
+<div class="terminal">
+    <pre class="ascii">
+         _____           _    __      _ _        
+        |  __ \         | |  / _|    | (_)       
+        | |__| |__  _ __| |_| |_ ___ | |_  ___   
+        |  ___/ _ \| '__| __|  _/ _ \| | |/ _ \  
+        | |  | (_) | |  | |_| || (_) | | | (_) | 
+        |_|   \___/|_|   \__|_| \___/|_|_|\___/  
+
+    </pre>
+
+    <div id="typed"></div>
+
+    <div id="output"></div>
+    <div class="input-line">
+      <span>&gt;</span> <input type="text" id="command" autofocus />
+    </div>
+</div>
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typeit@8.0.3/dist/index.umd.js"></script>
+<script>
+    new TypeIt("#typed", {
+        strings: ["Witaj w moim cyfrowym terminalu..."],
+        speed: 50,
+        waitUntilVisible: true,
+    }).go();
+</script>
+</body>
+</html>
+
+<audio id="bg-music" loop>
+  <source src="audio/Cyberpunk_2077.mp3" type="audio/mpeg">
+</audio>
+<button id="toggle-music">🎵 Włącz muzykę</button>

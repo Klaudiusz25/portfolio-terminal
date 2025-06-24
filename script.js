@@ -13,10 +13,14 @@ let columns = canvas.width / fontSize;
 
 let drops = Array.from({ length: columns }, () => 1);
 
-document.addEventListener('keydown', () => {
+function removeBootScreen() {
     const boot = document.getElementById('boot-screen');
     if (boot) boot.remove();
-}, { once: true });
+}
+
+document.addEventListener('keydown', removeBootScreen, { once: true });
+document.addEventListener('click', removeBootScreen, { once: true });
+document.addEventListener('touchstart', removeBootScreen, { once: true });
 
 function draw() {
     ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
